@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>HAPPY BIRTHDAY MAYA!!!</title>
+  <style>
+    body {
+      background-color: #0b1314;
+      color: #13d487;
+      font-family: 'Impact', sans-serif;
+      margin: 0;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    /* Dramatic Entrance Overlay */
+    #overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background-color: #050a0a;
+      z-index: 100;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      transition: opacity 0.5s ease;
+    }
+
+    #overlay h2 {
+      color: #e04334;
+      font-size: 3rem;
+      text-shadow: 0 0 20px rgba(224, 67, 52, 0.8);
+      margin-bottom: 30px;
+      text-align: center;
+    }
+
+    .aura-btn {
+      background-color: #13d487;
+      color: #050a0a;
+      font-family: 'Impact', sans-serif;
+      font-size: 1.8rem;
+      padding: 15px 40px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      box-shadow: 0 0 25px #13d487;
+      transition: transform 0.1s ease;
+    }
+
+    .aura-btn:hover {
+      transform: scale(1.05);
+      background-color: #29936A;
+      color: #fff;
+    }
+
+    h1 {
+      color: #e04334;
+      text-shadow: 0 0 20px rgba(224, 67, 52, 0.8);
+      font-size: 3.5rem;
+      margin-bottom: 5px;
+      letter-spacing: 2px;
+      text-align: center;
+    }
+
+    p {
+      color: #a2c0a5;
+      font-size: 1.5rem;
+      text-shadow: 0 0 10px rgba(19, 212, 135, 0.5);
+      margin-top: 0;
+      text-align: center;
+    }
+
+    .scene-container {
+      position: relative;
+      width: 500px;
+      height: 400px;
+      border: 4px solid #13d487;
+      box-shadow: 0 0 30px rgba(19, 212, 135, 0.3);
+      background-color: #050a0a;
+      overflow: hidden;
+    }
+
+    .stairs-wrapper {
+      position: absolute;
+      width: 1000px; 
+      height: 800px;
+      top: -400px;
+      left: 0;
+      display: grid;
+      grid-template-columns: repeat(2, 500px);
+      grid-template-rows: repeat(2, 400px);
+      animation: moveStairs 1.2s linear infinite;
+    }
+
+    .stair-segment {
+      width: 500px;
+      height: 400px;
+    }
+
+    /* Outer wrapper handles the diagonal climb along the stairs */
+    .friend-avatar {
+      position: absolute;
+      bottom: 20px; 
+      left: 20px; 
+      width: 90px;
+      height: 90px;
+      z-index: 10;
+      animation: climbStairs 1.2s linear infinite;
+    }
+
+    /* Inner wrapper handles the little running bounce */
+    .friend-bounce {
+      width: 100%;
+      height: 100%;
+      animation: runningMotion 0.23s ease-in-out infinite alternate;
+    }
+
+    .friend-avatar img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      filter: drop-shadow(0 0 15px #13d487);
+    }
+
+    @keyframes moveStairs {
+      0% { transform: translate(0, 0); }
+      100% { transform: translate(-500px, 400px); }
+    }
+
+    /* Moves the character up-and-right in sync with the stairs' diagonal,
+       looping back to the bottom-left step each cycle */
+    @keyframes climbStairs {
+      0%   { transform: translate(0px, 0px); }
+      100% { transform: translate(375px, -300px); }
+    }
+
+    @keyframes runningMotion {
+      0% { transform: translateY(0) scaleY(1) rotate(-4deg); }
+      100% { transform: translateY(-14px) scaleY(0.93) rotate(4deg); }
+    }
+  </style>
+</head>
+<body>
+
+  <div id="overlay">
+    <h2>ARE YOU READY TO CLIMB?</h2>
+    <button class="aura-btn" onclick="startTheCard()">CLAIM YOUR AURA</button>
+  </div>
+
+  <audio id="memeSong" src="pretty-boy-v3.mp3" loop></audio>
+
+  <h1>HAPPY BIRTHDAY!!!</h1>
+  <p>EVEN IF THE STAIRS NEVER END, WE KEEP CLIMBING!!!</p>
+
+  <div class="scene-container">
+    <div class="stairs-wrapper">
+      <svg class="stair-segment" viewBox="0 0 500 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M500 0 H450 V40 H400 V80 H350 V120 H300 V160 H250 V200 H200 V240 H150 V280 H100 V320 H50 V360 H0 V400 H500 Z" fill="#0c2b1e" stroke="#13d487" stroke-width="6"/>
+      </svg>
+      <svg class="stair-segment" viewBox="0 0 500 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M500 0 H450 V40 H400 V80 H350 V120 H300 V160 H250 V200 H200 V240 H150 V280 H100 V320 H50 V360 H0 V400 H500 Z" fill="#0c2b1e" stroke="#13d487" stroke-width="6"/>
+      </svg>
+      <svg class="stair-segment" viewBox="0 0 500 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M500 0 H450 V40 H400 V80 H350 V120 H300 V160 H250 V200 H200 V240 H150 V280 H100 V320 H50 V360 H0 V400 H500 Z" fill="#0c2b1e" stroke="#13d487" stroke-width="6"/>
+      </svg>
+      <svg class="stair-segment" viewBox="0 0 500 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M500 0 H450 V40 H400 V80 H350 V120 H300 V160 H250 V200 H200 V240 H150 V280 H100 V320 H50 V360 H0 V400 H500 Z" fill="#0c2b1e" stroke="#13d487" stroke-width="6"/>
+      </svg>
+    </div>
+    
+    <div class="friend-avatar">
+      <div class="friend-bounce">
+        <img src="friend-face.png" alt="Birthday Boy/Girl">
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function startTheCard() {
+      // 1. Play the Phonk song
+      var song = document.getElementById("memeSong");
+      song.play().catch(function(error) {
+         console.log("Audio couldn't play automatically: ", error);
+      });
+
+      // 2. Hide the overlay smoothly
+      var overlay = document.getElementById("overlay");
+      overlay.style.opacity = 0;
+      setTimeout(function() {
+        overlay.style.display = "none";
+      }, 500);
+    }
+  </script>
+
+</body>
+</html>
